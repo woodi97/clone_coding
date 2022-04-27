@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { forwardRef, ForwardRefRenderFunction } from "react";
 
 import Home from "@src/assets/home.svg";
 import Inbox from "@src/assets/inbox.svg";
@@ -19,8 +19,15 @@ const iconSelector: { [keys in IconName]: JSX.Element } = {
   notification: <Notification />,
 };
 
-const IconWrapper: FC<IconWrapperShape> = ({ name, className }) => {
-  return <div className={className}>{iconSelector[name]}</div>;
+const IconWrapper: ForwardRefRenderFunction<
+  HTMLDivElement,
+  IconWrapperShape
+> = ({ name, className }, ref) => {
+  return (
+    <div ref={ref} className={className}>
+      {iconSelector[name]}
+    </div>
+  );
 };
 
-export default IconWrapper;
+export default forwardRef(IconWrapper);
