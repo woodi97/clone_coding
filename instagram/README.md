@@ -1,35 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 나만의 SNS
 
-## Getting Started
+1. 5/2 오전 11시
+2. 4일 정도
 
-First, run the development server:
+## 기능 리스트
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+1. 프로필 조회
+2. 프로필 수정
+3. 게시글 생성(게시글 이미지 하나까지만, )
+4. 게시글 조회(작성자 정보)
+5. 게시글 수정
+6. 좋아요,괜찮아요,놀라워요 기능
+7. 로그인(JWT 토큰 넘겨줘야함)
+8. 로그아웃
+9. 회원가입(프로필 업로드 까지)
+10. 다크 모드 전환
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 기능(TBD)
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- 일정겹치는 것 검사
+  - 일정 등록기능
+  - public 지원
+  - 일정 수정기능
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## FE
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+1. 프로필 페이지(1,2 기능 API 연동)
+2.
 
-## Learn More
+## BE
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# CloneCoding
+1.
