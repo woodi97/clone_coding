@@ -1,0 +1,17 @@
+@import "reset.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html * {
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+
+*,
+*:before,
+*:after {
+  color: inherit;
+  box-sizing: inherit;
+}
