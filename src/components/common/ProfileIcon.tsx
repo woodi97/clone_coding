@@ -1,5 +1,5 @@
 import { getRandomInt } from "@src/utils/number";
-import { FC } from "react";
+import { FC, memo } from "react";
 import Image from "./ImageWrapper";
 
 type iconSize = "small" | "medium" | "large";
@@ -60,4 +60,4 @@ const ProfileIcon: FC<iconShape> = ({
   );
 };
 
-export default ProfileIcon;
+export default memo(ProfileIcon);

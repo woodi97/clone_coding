@@ -18,7 +18,12 @@ const PageLayout: FC<Props> = ({ children }) => {
   return (
     <div>
       <Navigtaion ref={navRef} />
-      <div ref={childRef}>{children}</div>
+      <main
+        ref={childRef}
+        className="z-0 flex flex-col w-full min-h-screen mx-auto max-w-3xl"
+      >
+        {children}
+      </main>
     </div>
   );
 };

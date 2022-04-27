@@ -4,10 +4,20 @@ import Home from "@src/assets/home.svg";
 import Inbox from "@src/assets/inbox.svg";
 import Explore from "@src/assets/explore.svg";
 import Notification from "@src/assets/notifications.svg";
+import Bookmark from "@src/assets/bookmark.svg";
+import CardButton from "@src/assets/cardButton.svg";
+import Comments from "@src/assets/comments.svg";
 
-export type IconName = "home" | "inbox" | "explore" | "notification";
+export type IconName =
+  | "home"
+  | "inbox"
+  | "explore"
+  | "notification"
+  | "bookmark"
+  | "cardButton"
+  | "comments";
 
-type IconWrapperShape = {
+export type IconWrapperShape = {
   name: IconName;
   className?: string;
 };
@@ -17,6 +27,9 @@ const iconSelector: { [keys in IconName]: JSX.Element } = {
   inbox: <Inbox />,
   explore: <Explore />,
   notification: <Notification />,
+  bookmark: <Bookmark />,
+  cardButton: <CardButton />,
+  comments: <Comments />,
 };
 
 const IconWrapper: ForwardRefRenderFunction<
