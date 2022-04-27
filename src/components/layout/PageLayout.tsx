@@ -10,7 +10,6 @@ const PageLayout: FC<Props> = ({ children }) => {
   const childRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    console.log(navRef.current);
     if (childRef.current) {
       childRef.current.style.paddingTop = navRef.current?.clientHeight + "px";
     }

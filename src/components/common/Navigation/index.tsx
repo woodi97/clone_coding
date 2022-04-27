@@ -33,7 +33,7 @@ const Navigtaion: ForwardRefRenderFunction<HTMLDivElement, navShape> = (
   return (
     <nav
       ref={ref}
-      className="fixed flex justify-center w-screen top-0 left-1/2 -translate-x-1/2 border-b-2 border-solid border-gray-300"
+      className="fixed flex justify-center w-screen top-0 left-1/2 -translate-x-1/2 bg-white border-b-2 border-solid border-gray-300"
     >
       <div className="inline-flex py-5 justify-between w-full max-w-5xl h-30 items-center">
         <Link passHref href="/">
