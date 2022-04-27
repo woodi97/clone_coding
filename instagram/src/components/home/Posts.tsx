@@ -87,7 +87,7 @@ const Post = () => {
 
 const Posts = () => {
   return (
-    <div>
+    <div className="space-y-4">
       {Array(20)
         .fill(0)
         .map((_, idx) => {
