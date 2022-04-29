@@ -6,6 +6,7 @@ const handler = async (req, res) => {
     const { userID, password } = req.body;
     if (userID &&password) {
         try {
+          User.findOneByUserName
           const user = new User({
             userID,
             password,
