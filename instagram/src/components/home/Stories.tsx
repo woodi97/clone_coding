@@ -13,7 +13,7 @@ const Story = () => {
 
 const Stories = (props: Props) => {
   return (
-    <div className="flex items-center relative left-1/2 -translate-x-1/2 h-24 rounded-sm border border-solid border-gray-300 bg-white overflow-x-scroll overflow-y-hidden scrollbar-hide">
+    <div className="flex items-center relative left-1/2 -translate-x-1/2 h-24 rounded-sm border border-solid border-gray-300 bg-white dark:bg-gray-700 overflow-x-scroll overflow-y-hidden scrollbar-hide">
       {Array(30)
         .fill(0)
         .map((_, idx) => {
