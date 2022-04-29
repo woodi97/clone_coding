@@ -22,6 +22,7 @@ const PostIcons = () => {
         <IconButtonWrapper name="comments" />
         <IconButtonWrapper name="comments" />
         <IconButtonWrapper name="comments" />
+        <IconButtonWrapper name="comments" />
       </div>
       <IconButtonWrapper name="bookmark" />
     </div>
