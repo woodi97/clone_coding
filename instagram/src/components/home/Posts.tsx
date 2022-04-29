@@ -71,7 +71,7 @@ const Post = () => {
         <PostNav />
         <Image src="/vercel.svg" layout="fill" alt="post-img" />
       </div>
-      <div className="border-t-[1px] border-solid border-black p-4">
+      <div className="border-t-[1px] border-solid border-black dark:border-white p-4">
         <div className="p-4`">
           <PostIcons />
           <PostContent />

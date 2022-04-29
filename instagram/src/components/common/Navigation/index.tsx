@@ -8,7 +8,6 @@ import NavMenu from "./NavMenu";
 
 import {
   ChangeEvent,
-  FC,
   forwardRef,
   ForwardRefRenderFunction,
   useState,
@@ -22,7 +21,7 @@ const Navigtaion: ForwardRefRenderFunction<HTMLDivElement, navShape> = (
   props,
   ref
 ) => {
-  const { theme } = useTheme();
+  const { theme, resolvedTheme } = useTheme();
   const [input, setInput] = useState("");
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -41,7 +40,7 @@ const Navigtaion: ForwardRefRenderFunction<HTMLDivElement, navShape> = (
       <div className="inline-flex py-5 justify-between w-full max-w-5xl h-30 items-center">
         <Link passHref href="/">
           <div>
-            {theme === "dark" ? (
+            {(theme || resolvedTheme) === "dark" ? (
               <ImageWrapper
                 src={LogoWhite}
                 loading="eager"

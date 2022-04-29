@@ -1,18 +1,29 @@
-import React, { forwardRef, ForwardRefRenderFunction } from "react";
+import { motion } from "framer-motion";
+import React, {
+  forwardRef,
+  ForwardRefRenderFunction,
+  MouseEventHandler,
+} from "react";
 import IconWrapper, { IconWrapperShape } from "./IconWrapper";
 
 type IconButtonShape = {
-  onClick?: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {};
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 };
 
 const IconButtonWrapper: ForwardRefRenderFunction<
   HTMLDivElement,
   IconWrapperShape & IconButtonShape
-> = ({ ...props }, ref) => {
+> = ({ onClick, ...props }, ref) => {
   return (
-    <button className="cursor-pointer">
+    <motion.button
+      whileHover={{
+        scale: 1.1,
+      }}
+      className="cursor-pointer"
+      onClick={onClick}
+    >
       <IconWrapper {...props} />
-    </button>
+    </motion.button>
   );
 };
 

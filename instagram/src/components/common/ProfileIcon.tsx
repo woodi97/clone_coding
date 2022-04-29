@@ -42,7 +42,7 @@ const ProfileIcon: FC<iconShape> = ({
     <span
       className={
         storyBorder
-          ? "rounded-full p-1 m-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
+          ? "rounded-full p-1 m-0 bg-gradient-to-r from-indigo-500 dark:from-indigo-700 via-purple-500 dark:via-purple-700 to-pink-500 dark:to-pink-700"
           : ""
       }
     >
