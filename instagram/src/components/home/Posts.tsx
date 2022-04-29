@@ -5,7 +5,7 @@ import ProfileIcon from "../common/ProfileIcon";
 
 const PostNav = () => {
   return (
-    <div className="flex items-center p-4 justify-between border-b-[1px] border-solid border-gray-300">
+    <div className="flex items-center p-4 justify-between border-b-[1px] border-solid bg-white dark:bg-gray-700">
       <div className="flex items-center space-x-4">
         <ProfileIcon />
         <span>moveshop___</span>
@@ -30,7 +30,7 @@ const PostIcons = () => {
 
 const PostContent = () => {
   return (
-    <div className="flex flex-col space-y-1 py-4">
+    <div className="flex flex-col space-y-1 py-4 ">
       <span>3 likes</span>
       <span>moveshop___LGAG...more</span>
       <span className="text-xs text-gray-500">2 DAYS AGO</span>
@@ -50,7 +50,7 @@ const PostComment = () => {
       <div className="flex space-x-2 items-center w-9/12">
         <ProfileIcon />
         <input
-          className="w-[400px]"
+          className="w-[400px] bg-transparent"
           placeholder="Add a comment"
           name="comment"
           value={comment}
@@ -66,13 +66,13 @@ const PostComment = () => {
 
 const Post = () => {
   return (
-    <div className="relative border-[1px] border-solid border-gray-300">
-      <div className="relative h-[500px] w-full">
+    <div className="relative border-[1px] border-solid border-white dark:border-white bg-white dark:bg-gray-700">
+      <div className="relative h-[500px] w-full dark:bg-gray-700">
         <PostNav />
         <Image src="/vercel.svg" layout="fill" alt="post-img" />
       </div>
-      <div>
-        <div className="p-4">
+      <div className="border-t-[1px] border-solid border-black p-4">
+        <div className="p-4`">
           <PostIcons />
           <PostContent />
         </div>
