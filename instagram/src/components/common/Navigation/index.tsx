@@ -39,14 +39,14 @@ const Navigtaion: ForwardRefRenderFunction<HTMLDivElement, navShape> = (
     >
       <div className="inline-flex py-5 justify-between w-full max-w-5xl h-30 items-center">
         <Link passHref href="/">
-          <div>
+          <div className="cursor-pointer">
             {(theme || resolvedTheme) === "dark" ? (
               <ImageWrapper
                 src={LogoWhite}
                 loading="eager"
                 width={120}
                 height={28}
-                alt="searchIcon"
+                alt="searchIconWhite"
               />
             ) : (
               <ImageWrapper
