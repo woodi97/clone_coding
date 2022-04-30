@@ -3,7 +3,7 @@ import User from "../../../models/User"
 import jwt from "jsonwebtoken"
 
 const userLogin = (req, res) => {
-    const { username, password } = req.body;
+    const { userID, password } = req.body;
     const secret = process.env.SESSION_SECRET;
     const options = {
       expiresIn: '7d',
@@ -57,7 +57,7 @@ const userLogin = (req, res) => {
     };
 
     // find the user
-    User.findOneByUsername(username).then(check).then(respond).catch(onError);
+    User.findOneByUsername(userID).then(check).then(respond).catch(onError);
   };
 
   export default connectDB(userLogin);
