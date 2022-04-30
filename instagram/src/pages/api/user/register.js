@@ -1,7 +1,7 @@
 import connectDB from '../../../middleware/mongodb';
 import User from '../../../models/user';
 
-const handler = async (req, res) => {
+const userRegister = async (req, res) => {
   if (req.method === 'POST') {
     const { userID, password } = req.body;
     if (userID &&password) {
@@ -25,4 +25,4 @@ const handler = async (req, res) => {
   }
 };
 
-export default connectDB(handler);
+export default connectDB(userRegister);

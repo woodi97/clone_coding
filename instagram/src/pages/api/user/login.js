@@ -2,7 +2,7 @@ import connectDB from "../../../middleware/mongodb";
 import User from "../../../models/User"
 import jwt from "jsonwebtoken"
 
-const loginHandler = (req, res) => {
+const userLogin = (req, res) => {
     const { username, password } = req.body;
     const secret = process.env.SESSION_SECRET;
     const options = {
@@ -60,4 +60,4 @@ const loginHandler = (req, res) => {
     User.findOneByUsername(username).then(check).then(respond).catch(onError);
   };
 
-  export default connectDB(loginHandler);
+  export default connectDB(userLogin);
