@@ -7,6 +7,7 @@ type iconSize = "small" | "medium" | "large" | "xlarge";
 type iconShape = {
 	iconSize?: iconSize;
 	storyBorder?: boolean;
+	profileBorder?: boolean;
 	image?: string;
 };
 
@@ -34,6 +35,7 @@ const iconSizeSelector: {
 const ProfileIcon: FC<iconShape> = ({
 	iconSize = "medium",
 	storyBorder,
+	profileBorder = false,
 	image,
 }) => {
 	const randomId = getRandomInt(1, 70);
@@ -42,26 +44,26 @@ const ProfileIcon: FC<iconShape> = ({
 		? image
 		: `https://i.pravatar.cc/150?img=${randomId}`;
 
-  return (
-    <span
-      className={
-        storyBorder
-          ? "rounded-full p-1 m-0 bg-gradient-to-r from-indigo-500 dark:from-indigo-700 via-purple-500 dark:via-purple-700 to-pink-500 dark:to-pink-700"
-          : ""
-      }
-    >
-      <div className="flex items-center border-solid border-white border-[1px] rounded-full hover:cursor-pointer">
-        <Image
-          className="rounded-full border-sm"
-          width={size.width}
-          height={size.height}
-          layout="fixed"
-          src={profileImage}
-          alt="profile"
-        />
-      </div>
-    </span>
-  );
+	return (
+		<span
+			className={
+				storyBorder
+					? "rounded-full p-1 m-0 bg-gradient-to-r from-indigo-500 dark:from-indigo-700 via-purple-500 dark:via-purple-700 to-pink-500 dark:to-pink-700"
+					: ""
+			}
+		>
+			<div className="flex items-center border-solid border-white border-[1px] rounded-full hover:cursor-pointer">
+				<Image
+					className="rounded-full border-sm"
+					width={size.width}
+					height={size.height}
+					layout="fixed"
+					src={profileImage}
+					alt="profile"
+				/>
+			</div>
+		</span>
+	);
 };
 
 export default memo(ProfileIcon);
