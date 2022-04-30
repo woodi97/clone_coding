@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const Schema = mongoose.Schema;
 
-const user = new Schema({
+const UserSchema = new Schema({
   userID: {
     type: String,
     required: true,
@@ -13,11 +13,12 @@ const user = new Schema({
     required: true
   },
   profile_img: Buffer,
+  postID_array: [String],
   follower_num: {type: Number, default: 0},
   following_num: {type: Number, default: 0},
 });
 
-user.statics.findOneByUsername = function (userID) {
+UserSchema.statics.findOneByUsername = function (userID) {
     return this.findOne({
       userID,
     }).exec();
@@ -25,5 +26,5 @@ user.statics.findOneByUsername = function (userID) {
 mongoose.models = {};
 
 
-const User= mongoose.model('User', user);
+const User= mongoose.model('User', UserSchema);
 export default User;

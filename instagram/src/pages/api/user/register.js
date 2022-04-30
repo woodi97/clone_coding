@@ -1,5 +1,5 @@
 import connectDB from '../../../middleware/mongodb';
-import User from '../../../models/user';
+import User from '../../../models/User';
 
 const userRegister = async (req, res) => {
   if (req.method === 'POST') {

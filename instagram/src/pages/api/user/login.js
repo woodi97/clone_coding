@@ -43,9 +43,9 @@ const userLogin = (req, res) => {
 
     // respond the token
     const respond = (token) => {
+      res.setHeader('Set-Cookie', token)
       res.json({
         message: 'logged in successfully',
-        token,
       });
     };
 
@@ -55,8 +55,7 @@ const userLogin = (req, res) => {
         message: error.message,
       });
     };
-
-    // find the user
+    // find the use
     User.findOneByUsername(userID).then(check).then(respond).catch(onError);
   };
 
