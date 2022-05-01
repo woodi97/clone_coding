@@ -7,7 +7,7 @@ import ThemeSwitch from "../ThemeSwitch";
 
 const NavMenu = () => {
   const [modal, setModal] = useState(false);
-  const items: IconName[] = ["home", "inbox", "explore", "notification"];
+  const items: IconName[] = ["explore"];
   const iconClassName = "flex items-center w-8 h-8";
 
   return (

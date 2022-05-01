@@ -10,6 +10,7 @@ import {
   ChangeEvent,
   forwardRef,
   ForwardRefRenderFunction,
+  useEffect,
   useState,
 } from "react";
 import { debounce } from "lodash-es";
@@ -21,6 +22,7 @@ const Navigtaion: ForwardRefRenderFunction<HTMLDivElement, navShape> = (
   props,
   ref
 ) => {
+  const [init, setInit] = useState(false);
   const { theme, resolvedTheme } = useTheme();
   const [input, setInput] = useState("");
 
@@ -32,7 +34,12 @@ const Navigtaion: ForwardRefRenderFunction<HTMLDivElement, navShape> = (
     })();
   };
 
-  return (
+  useEffect(() => {
+    console.log(1);
+    setInit(true);
+  }, []);
+
+  return init ? (
     <nav
       ref={ref}
       className="z-10 fixed flex justify-center w-screen top-0 left-1/2 -translate-x-1/2 bg-white dark:bg-gray-900 border-b-2 border-solid border-gray-300"
@@ -40,7 +47,7 @@ const Navigtaion: ForwardRefRenderFunction<HTMLDivElement, navShape> = (
       <div className="inline-flex py-5 justify-between w-full max-w-5xl h-30 items-center">
         <Link passHref href="/">
           <div className="cursor-pointer">
-            {(theme || resolvedTheme) === "dark" ? (
+            {theme === "dark" ? (
               <ImageWrapper
                 src={LogoWhite}
                 loading="eager"
@@ -77,7 +84,7 @@ const Navigtaion: ForwardRefRenderFunction<HTMLDivElement, navShape> = (
         <NavMenu />
       </div>
     </nav>
-  );
+  ) : null;
 };
 
 export default forwardRef(Navigtaion);
