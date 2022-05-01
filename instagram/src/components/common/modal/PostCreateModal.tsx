@@ -65,7 +65,7 @@ const PostCreateModal: FC<{
         <form className="flex h-full flex-col items-start space-y-4">
           <div className="flex w-full h-full space-x-2">
             <label
-              className="w-full text-center px-6 py-3 bg-gray-700 rounded-lg text-white cursor-pointer"
+              className="w-full text-center px-6 py-3 bg-gray-700 rounded-lg text-white cursor-pointer dark:bg-gray-300"
               htmlFor="image"
             >
               이미지 업로드

@@ -45,7 +45,9 @@ const ModalBase: FC<{
       />
       <div className="relative z-[998] w-full sm:max-w-lg sm:min-w-[20rem] rounded-md bg-white dark:bg-gray-700">
         <div className=" px-8">
-          <h1 className="text-md text-center py-2 border-b-2">{title}</h1>
+          <h1 className="text-md text-center py-2 border-b-2 dark:text-white">
+            {title}
+          </h1>
         </div>
         <HorizontalLine />
         <div className=" px-8">

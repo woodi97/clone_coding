@@ -59,7 +59,7 @@ const Navigtaion: ForwardRefRenderFunction<HTMLDivElement, navShape> = (
             )}
           </div>
         </Link>
-        <div className="flex px-2 py-1 items-center border border-solid border-black space-x-2 rounded-lg dark:bg-gray-700">
+        <div className="hidden md:flex px-2 py-1 items-center border border-solid border-black space-x-2 rounded-lg dark:bg-gray-700">
           <ImageWrapper
             src={searchIcon}
             width={20}
