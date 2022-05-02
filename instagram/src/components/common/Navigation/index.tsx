@@ -15,11 +15,14 @@ import {
 } from "react";
 import { debounce } from "lodash-es";
 import { useTheme } from "next-themes";
+import classNames from "classnames";
 
-type navShape = {};
+type navShape = {
+  className: string;
+};
 
 const Navigtaion: ForwardRefRenderFunction<HTMLDivElement, navShape> = (
-  props,
+  { className },
   ref
 ) => {
   const [init, setInit] = useState(false);
@@ -42,7 +45,10 @@ const Navigtaion: ForwardRefRenderFunction<HTMLDivElement, navShape> = (
   return init ? (
     <nav
       ref={ref}
-      className="z-10 fixed flex justify-center w-screen top-0 left-1/2 -translate-x-1/2 bg-white dark:bg-gray-900 border-b-2 border-solid border-gray-300"
+      className={classNames(
+        "z-10 fixed flex justify-center w-screen top-0 left-1/2 -translate-x-1/2 bg-white dark:bg-gray-900 border-b-2 border-solid border-gray-300",
+        className
+      )}
     >
       <div className="inline-flex py-5 justify-between w-full max-w-5xl h-30 items-center">
         <Link passHref href="/">
